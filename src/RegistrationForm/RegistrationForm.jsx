@@ -4,7 +4,7 @@ import { Formik, Field, Form } from 'formik';
 const RegistrationForm = () => {
   return (
     <div className="registartion-form">
-      <h1>Registration Form</h1>
+      <h1 className="form-title">Registration Form</h1>
       <Formik
         initialValues={{ name: '', email: '', password: '' }}
         onSubmit={async (values) => {

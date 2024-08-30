@@ -1,9 +1,12 @@
 import { Formik, Field, Form } from 'formik';
+import { MdLogin } from 'react-icons/md';
 
 const LoginForm = () => {
   return (
     <div className="registartion-form">
-      <h1>Login Form</h1>
+      <h1 className="form-title">
+        Login Form <MdLogin style={{ fontSize: '30px' }} />
+      </h1>
       <Formik
         initialValues={{ email: '', password: '' }}
         onSubmit={async (values) => {
