@@ -1,31 +1,32 @@
 import { Formik, Field, Form } from 'formik';
 import { MdLogin } from 'react-icons/md';
+import { useDispatch } from 'react-redux';
+import { fetchUserLogin } from '../../redux/auth/operation';
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
+  const onSubmit = async (values) => {
+    dispatch(fetchUserLogin(values));
+  };
+
   return (
     <div className="registartion-form">
       <h1 className="form-title">
         Login Form <MdLogin style={{ fontSize: '30px' }} />
       </h1>
-      <Formik
-        initialValues={{ email: '', password: '' }}
-        onSubmit={async (values) => {
-          await new Promise((resolve) => setTimeout(resolve, 500));
-          alert(JSON.stringify(values, null, 2));
-        }}
-      >
+      <Formik initialValues={{ email: '', password: '' }} onSubmit={onSubmit}>
         <Form className="form">
-          <Field
-            name="name"
-            type="text"
-            className="form-field"
-            placeholder="Name"
-          />
           <Field
             name="email"
             type="email"
             className="form-field"
             placeholder="Email"
+          />
+          <Field
+            name="password"
+            type="password"
+            className="form-field"
+            placeholder="Password"
           />
 
           <button type="submit" className="form-button">
