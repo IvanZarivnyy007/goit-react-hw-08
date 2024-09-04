@@ -16,16 +16,16 @@ const LoginForm = () => {
       >
         <Form className="form">
           <Field
-            name="name"
-            type="text"
-            className="form-field"
-            placeholder="Name"
-          />
-          <Field
             name="email"
             type="email"
             className="form-field"
             placeholder="Email"
+          />
+          <Field
+            name="password"
+            type="password"
+            className="form-field"
+            placeholder="Password"
           />
 
           <button type="submit" className="form-button">
