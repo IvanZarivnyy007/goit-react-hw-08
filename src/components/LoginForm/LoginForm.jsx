@@ -7,13 +7,7 @@ const LoginForm = () => {
       <h1 className="form-title">
         Login Form <MdLogin style={{ fontSize: '30px' }} />
       </h1>
-      <Formik
-        initialValues={{ email: '', password: '' }}
-        onSubmit={async (values) => {
-          await new Promise((resolve) => setTimeout(resolve, 500));
-          alert(JSON.stringify(values, null, 2));
-        }}
-      >
+      <Formik initialValues={{ email: '', password: '' }} onSubmit={onSubmit}>
         <Form className="form">
           <Field
             name="email"
