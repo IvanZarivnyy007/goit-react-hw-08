@@ -1,16 +1,20 @@
 import { Formik, Field, Form } from 'formik';
-// import './styles.css';
+
+import { useDispatch } from 'react-redux';
+import { fetchUserSignup } from '../../redux/auth/operation';
 
 const RegistrationForm = () => {
+  const dispatch = useDispatch();
+  const onSubmit = async (values) => {
+    dispatch(fetchUserSignup(values));
+  };
+
   return (
     <div className="registartion-form">
       <h1 className="form-title">Registration Form</h1>
       <Formik
         initialValues={{ name: '', email: '', password: '' }}
-        onSubmit={async (values) => {
-          await new Promise((resolve) => setTimeout(resolve, 500));
-          alert(JSON.stringify(values, null, 2));
-        }}
+        onSubmit={onSubmit}
       >
         <Form className="form">
           <Field

@@ -1,7 +1,16 @@
 import { Formik, Field, Form } from 'formik';
 import { MdLogin } from 'react-icons/md';
 
+import { useDispatch } from 'react-redux';
+import { fetchUserLogin } from '../../redux/auth/operation';
+
 const LoginForm = () => {
+  const dispatch = useDispatch();
+
+  const onSubmit = async (values) => {
+    dispatch(fetchUserLogin(values));
+  };
+
   return (
     <div className="registartion-form">
       <h1 className="form-title">
