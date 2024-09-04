@@ -7,15 +7,9 @@ const RegistrationPage = lazy(() => import('./pages/RegistrationPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage'));
 
-import AppBar from './components/AppBar/AppBar';
-
 function App() {
   return (
     <>
-      <header>
-        <AppBar />
-      </header>
-
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
