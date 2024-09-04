@@ -7,7 +7,7 @@ const RegistrationPage = lazy(() => import('./pages/RegistrationPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage'));
 
-import AppBar from './AppBar/AppBar';
+import AppBar from './components/AppBar/AppBar';
 
 function App() {
   return (
