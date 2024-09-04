@@ -1,0 +1,21 @@
+.div-search {
+  margin-bottom: 20px;
+}
+
+.p-search {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.input-search {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-search:focus {
+  outline: none;
+  border-color: #007bff;
+}

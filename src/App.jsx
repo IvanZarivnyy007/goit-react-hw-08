@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import Layout from './componetns/Layout/Layout';
 import PrivateRoute from './componetns/PrivateRoute/PrivateRoute';
+import RestrictedRoutes from './componetns/PrivateRoute/RestrictedRoutes';
 
 const HomePage = lazy(() => import('./pages/Home'));
 const RegistrationPage = lazy(() => import('./pages/RegistrationPage'));
@@ -17,27 +18,25 @@ function App() {
         <Route
           path="/register"
           element={
-            <PrivateRoute
+            <RestrictedRoutes
               component={<RegistrationPage />}
               redirect="/contacts"
             />
           }
         />
-        ,
         <Route
           path="/login"
           element={
-            <PrivateRoute component={<LoginPage />} redirect="/contacts" />
+            <RestrictedRoutes component={<LoginPage />} redirect="/contacts" />
           }
         />
-        ,
+
         <Route
           path="/contacts"
           element={
             <PrivateRoute component={<ContactsPage />} redirect="/login" />
           }
         />
-        ,{/* </Route> */}
       </Routes>
     </Layout>
   );
