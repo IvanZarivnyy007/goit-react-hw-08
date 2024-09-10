@@ -29,6 +29,11 @@
 .nav-links-end {
   display: flex;
   gap: 20px;
+  margin-left: 150px;
+}
+
+.nav-link-start {
+  display: flex;
 }
 
 .form {
@@ -79,4 +84,148 @@
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  background-color: #ffffff; /* Білий фон для контейнера */
+  border-radius: 10px; /* Закруглені краї контейнера */
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для додання об'єму */
+  max-width: 500px; /* Максимальна ширина */
+  width: 100%;
+}
+
+/* Стилі заголовків */
+h1,
+.searchbox-title {
+  text-align: center;
+  color: black; /* Синій колір заголовків */
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+/* Стилі для пошуку */
+.searchbox-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.searchbox-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd; /* Світло-сіра рамка */
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s; /* Анімація зміни кольору рамки */
+}
+
+.searchbox-input:focus {
+  outline: none;
+  border-color: #007bff; /* Зміна кольору рамки при фокусі */
+}
+
+/* Стилі для форми додавання контакту */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.div-name,
+.div-number {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-weight: bold;
+  color: #666; /* Темно-сірий колір для міток */
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.error-message {
+  color: #e74c3c; /* Червоний колір для повідомлень про помилки */
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.button-Add-contact {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.button-Add-contact:hover {
+  background-color: #0056b3;
+}
+
+/* Стилі для списку контактів */
+.contact-div {
+  margin-top: 20px;
+}
+
+.contact-ul {
+  list-style: none; /* Видалення маркерів списку */
+  padding: 0;
+  margin: 0;
+}
+
+.contact-div-li {
+  background-color: #f9f9f9; /* Легкий сірий фон для елементів списку */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Легка тінь для додання об'єму */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Відстань між рядками */
+}
+
+.contact-name,
+.contact-number {
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-name {
+  font-weight: bold; /* Жирний текст для імені */
+}
+
+.button-contact {
+  background-color: #e74c3c; /* Червона кнопка для видалення */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Анімація зміни кольору */
+}
+
+.button-contact:hover {
+  background-color: #c0392b; /* Темно-червоний колір при наведенні */
 }
