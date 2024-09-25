@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const AuthNavigation = ({}) => {
   return (
-    <div>
+    <div className="auth-container">
       <NavLink to="/" className="nav-link nav-link-start">
         Home
       </NavLink>

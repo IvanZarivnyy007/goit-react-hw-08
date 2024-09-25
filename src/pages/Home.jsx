@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div>
+    <div className="registerImg">
       <h1 className="form-title">Welcome to the Contact Book</h1>
     </div>
   );

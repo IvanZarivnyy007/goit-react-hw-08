@@ -22,7 +22,7 @@ function App() {
             element={
               <RestrictedRoutes
                 component={<RegistrationPage />}
-                redirect="/register"
+                redirect="/contacts"
               />
             }
           />
@@ -30,14 +30,16 @@ function App() {
           <Route
             path="/login"
             element={
-              <RestrictedRoutes component={<LoginPage />} redirect="/login" />
+              <RestrictedRoutes
+                component={<LoginPage />}
+                redirect="/contacts"
+              />
             }
           />
-          ,
           <Route
             path="/contacts"
             element={
-              <PrivateRoute component={<ContactsPage />} redirect="/contacts" />
+              <PrivateRoute component={<ContactsPage />} redirect="/login" />
             }
           />
           ,
