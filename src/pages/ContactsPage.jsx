@@ -1,7 +1,7 @@
 import ContactForm from '../components/ContactForm/ContactForm';
 import SearchBox from '../components/SearchBox/SearchBox';
 import ContactList from '../components/ContactList/ContactList';
-import { fetchContacts } from '../redux/contact/contactsOps';
+import { fetchContacts } from '../redux/contact/operations.js';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
