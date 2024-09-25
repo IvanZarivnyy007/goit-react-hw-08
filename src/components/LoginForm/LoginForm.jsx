@@ -2,7 +2,7 @@ import { Formik, Field, Form } from 'formik';
 import { MdLogin } from 'react-icons/md';
 
 import { useDispatch } from 'react-redux';
-import { fetchUserLogin } from '../../redux/auth/operation';
+import { fetchUserLogin } from '../../redux/auth/operations';
 
 const LoginForm = () => {
   const dispatch = useDispatch();

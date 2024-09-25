@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { fetchUserLogout } from '../../redux/auth/operation';
+import { fetchUserLogout } from '../../redux/auth/operations';
 import { selectUser } from '../../redux/auth/selector';
 
 const UserNavigation = ({}) => {
