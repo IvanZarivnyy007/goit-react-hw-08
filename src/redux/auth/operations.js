@@ -59,3 +59,21 @@ export const fetchUserLogout = createAsyncThunk(
     }
   }
 );
+
+export const fetchrefreshUser = createAsyncThunk(
+  'user/fetchrefresh',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
+    if (persistedToken === null)
+      return thunkAPI.rejectWithValue('User not authorized');
+
+    try {
+      saveToken(persistedToken);
+      const response = await axios.get('/users/current');
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
