@@ -1,11 +1,8 @@
 import { NavLink } from 'react-router-dom';
 
-const AuthNavigation = ({}) => {
+const AuthNav = ({}) => {
   return (
     <div className="auth-container">
-      <NavLink to="/" className="nav-link nav-link-start">
-        Home
-      </NavLink>
       <div className="nav-links-end">
         <NavLink to="/register" className="nav-link">
           Registration
@@ -18,4 +15,4 @@ const AuthNavigation = ({}) => {
   );
 };
 
-export default AuthNavigation;
+export default AuthNav;
