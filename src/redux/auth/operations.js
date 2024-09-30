@@ -11,13 +11,13 @@ const resetHeaders = () => {
 
 export const fetchUserSignup = createAsyncThunk(
   'user/fetchUserSignup',
-  async (userData, thunkAPI) => {
+  async (_, thunkAPI) => {
     const BASE_URL = 'https://connections-api.goit.global';
     const END_POINT = '/users/signup';
     const url = BASE_URL + END_POINT;
 
     try {
-      const response = await axios.post(url, userData);
+      const response = await axios.post(url);
       saveToken(response.data.token);
       return response.data;
     } catch (e) {
