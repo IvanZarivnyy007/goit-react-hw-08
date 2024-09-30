@@ -48,3 +48,19 @@ export const deleteContact = createAsyncThunk(
     }
   }
 );
+
+export const editContact = createAsyncThunk(
+  'contacts/editContact',
+  async ({ contactId }, thunkAPI) => {
+    const BASE_URL = 'https://66cf28ab901aab248421245c.mockapi.io';
+    const END_POINT = `/contacts/${contactId}`;
+    const url = BASE_URL + END_POINT;
+
+    try {
+      const response = await axios.patch(url);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
